@@ -202,32 +202,42 @@ function playIntro() {
    ---------------------------------------------------------- */
 function runPreloader(done) {
   const pre = document.getElementById("preloader");
-  const ring = document.getElementById("preloaderRing");
+  const fill = document.getElementById("preloaderFill");
   const pct = document.getElementById("preloaderPct");
+  const caption = document.getElementById("preloaderCaption");
 
-  // CircularText: lay each character around the ring
-  const text = "ALOK KUMAR CHANCHAL • MOTION • VISUALS • ";
-  const chars = [...text];
-  const step = 360 / chars.length;
-  ring.textContent = "";
-  chars.forEach((ch, i) => {
-    const s = document.createElement("span");
-    s.textContent = ch === " " ? " " : ch;
-    s.style.transform = `rotate(${i * step}deg)`;
-    ring.appendChild(s);
-  });
+  const captions = [
+    { at: 0,  text: "analyzing media…" },
+    { at: 25, text: "loading timeline…" },
+    { at: 50, text: "applying color grade…" },
+    { at: 75, text: "rendering frames…" },
+    { at: 95, text: "finalizing export…" },
+  ];
+  let lastCap = -1;
 
-  // CountUp: 0 -> 100 with easeOutCubic
-  const duration = 2200;
+  const duration = 2400;
   const startT = performance.now();
   const ease = (t) => 1 - Math.pow(1 - t, 3);
+
   const tick = (now) => {
     const t = Math.min(1, (now - startT) / duration);
-    pct.textContent = Math.round(ease(t) * 100);
+    const p = Math.round(ease(t) * 100);
+    fill.style.width = p + "%";
+    pct.textContent = p + "%";
+
+    for (let k = captions.length - 1; k >= 0; k--) {
+      if (p >= captions[k].at && lastCap !== k) {
+        caption.textContent = captions[k].text;
+        lastCap = k;
+        break;
+      }
+    }
+
     if (t < 1) {
       requestAnimationFrame(tick);
     } else {
-      setTimeout(() => { pre.classList.add("is-done"); done(); }, 350);
+      caption.textContent = "export complete";
+      setTimeout(() => { pre.classList.add("is-done"); done(); }, 450);
     }
   };
   requestAnimationFrame(tick);

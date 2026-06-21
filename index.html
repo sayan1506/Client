@@ -35,12 +35,18 @@
   <div class="cursor" id="cursor" aria-hidden="true"></div>
   <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
-  <!-- Preloader: Circular Text ring + Count Up -->
+  <!-- Preloader: render / export bar -->
   <div class="preloader" id="preloader">
     <div class="preloader__inner">
-      <div class="preloader__ring" id="preloaderRing" aria-hidden="true"></div>
-      <div class="preloader__count">
-        <span class="preloader__num" id="preloaderPct">0</span><span class="preloader__sign">%</span>
+      <div class="preloader__top">
+        <span class="preloader__status">RENDERING</span>
+        <span class="preloader__sep">·</span>
+        <span class="preloader__name">ALOK KUMAR CHANCHAL</span>
+      </div>
+      <div class="preloader__bar"><span class="preloader__fill" id="preloaderFill"></span></div>
+      <div class="preloader__meta">
+        <span class="preloader__caption" id="preloaderCaption">analyzing media&hellip;</span>
+        <span class="preloader__pct" id="preloaderPct">0%</span>
       </div>
     </div>
   </div>
