@@ -65,9 +65,7 @@
 
   <!-- Navigation -->
   <header class="nav" id="nav">
-    <a href="#hero" class="nav__logo" data-cursor="hover">
-      AKC<span class="nav__logo-dot">.</span>
-    </a>
+    <a href="#hero" class="nav__logo" data-cursor="hover" aria-label="Home"></a>
     <nav class="nav__links" id="navLinks" aria-label="Primary">
       <a href="#about" data-cursor="hover">About</a>
       <a href="#skills" data-cursor="hover">Skills</a>
@@ -94,7 +92,7 @@
         </h1>
         <p class="hero__tagline reveal">Crafting stories through motion, visuals, and creativity.</p>
         <div class="hero__actions reveal">
-          <a href="#work" class="btn btn--primary magnetic" data-cursor="hover">
+          <a href="#work" class="btn btn--ghost magnetic" data-cursor="hover">
             <span>View Projects</span>
           </a>
           <a href="#contact" class="btn btn--ghost magnetic" data-cursor="hover">
@@ -142,7 +140,7 @@
         </div>
         <aside class="about__stats">
           <div class="stat glass reveal">
-            <span class="stat__num" data-count="50">0</span><span class="stat__plus">+</span>
+            <span class="stat__num" data-count="25">0</span><span class="stat__plus">+</span>
             <span class="stat__label">Projects Edited</span>
           </div>
           <div class="stat glass reveal">
@@ -221,26 +219,6 @@
         <button class="carousel__arrow carousel__arrow--next" id="skillsNext" aria-label="Next skill" data-cursor="hover">&#8250;</button>
         <div class="carousel__dots" id="skillsDots" role="tablist" aria-label="Skill slides"></div>
       </div>
-
-      <!-- Proficiency bars -->
-      <div class="skills__bars">
-        <div class="bar reveal" data-level="92">
-          <div class="bar__top"><span>Video Editing</span><span class="bar__pct">92%</span></div>
-          <div class="bar__track"><span class="bar__fill"></span></div>
-        </div>
-        <div class="bar reveal" data-level="88">
-          <div class="bar__top"><span>Motion Graphics</span><span class="bar__pct">88%</span></div>
-          <div class="bar__track"><span class="bar__fill"></span></div>
-        </div>
-        <div class="bar reveal" data-level="85">
-          <div class="bar__top"><span>Color Grading</span><span class="bar__pct">85%</span></div>
-          <div class="bar__track"><span class="bar__fill"></span></div>
-        </div>
-        <div class="bar reveal" data-level="70">
-          <div class="bar__top"><span>Visual Effects</span><span class="bar__pct">70%</span></div>
-          <div class="bar__track"><span class="bar__fill"></span></div>
-        </div>
-      </div>
     </section>
 
     <!-- 4. SOFTWARE STACK -->
@@ -269,21 +247,13 @@
         <article class="project glass reveal" data-cursor="view">
           <div class="project__media"><span class="project__num">01</span></div>
           <div class="project__body">
-            <h3>Hello BIT — Promotional Video</h3>
-            <p>A high-energy promo built on fast-paced editing and motion graphics to capture campus excitement.</p>
-            <ul class="tags tags--inline"><li>Event Promotion</li><li>Motion Graphics</li><li>Fast-Paced Edit</li></ul>
-          </div>
-        </article>
-        <article class="project glass reveal" data-cursor="view">
-          <div class="project__media"><span class="project__num">02</span></div>
-          <div class="project__body">
-            <h3>LEO Club — Promotional Content</h3>
+            <h3>Promotional Content</h3>
             <p>A social-media campaign blending event highlights with integrated motion graphics for community reach.</p>
             <ul class="tags tags--inline"><li>Social Campaign</li><li>Event Highlights</li><li>Motion Integration</li></ul>
           </div>
         </article>
         <article class="project glass reveal" data-cursor="view">
-          <div class="project__media"><span class="project__num">03</span></div>
+          <div class="project__media"><span class="project__num">02</span></div>
           <div class="project__body">
             <h3>Cinematic Reels Collection</h3>
             <p>A series of cinematic reels driven by storytelling, layered sound design, and refined color grading.</p>
@@ -291,7 +261,7 @@
           </div>
         </article>
         <article class="project glass reveal" data-cursor="view">
-          <div class="project__media"><span class="project__num">04</span></div>
+          <div class="project__media"><span class="project__num">03</span></div>
           <div class="project__body">
             <h3>Motion Graphics Showcase</h3>
             <p>An animation reel exploring typography in motion, logo animations, and creative transitions.</p>
@@ -299,7 +269,7 @@
           </div>
         </article>
         <article class="project glass reveal" data-cursor="view">
-          <div class="project__media"><span class="project__num">05</span></div>
+          <div class="project__media"><span class="project__num">04</span></div>
           <div class="project__body">
             <h3>Social Media Ad Concepts</h3>
             <p>Brand-focused, commercial-style edits crafted to showcase products with premium visual polish.</p>
@@ -345,7 +315,15 @@
           <div class="tl-item__content glass">
             <h3>College Media &amp; Creative Work</h3>
             <span class="tl-item__meta">BIT Sindri · LEO Club</span>
-            <p>Produced promotional and event content for LEO Club activities, college events, social campaigns, and student community projects.</p>
+            <p>Working in the video editing domain at LEO Club of BIT Sindri — managing college events, social campaigns, and video shoots and edits.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__content glass">
+            <h3>Content Creator</h3>
+            <span class="tl-item__meta">Independent · Social Platforms</span>
+            <p>Creating original content with a strong storytelling approach — handling video shooting and editing end to end to craft engaging, high-quality visuals that connect with audiences.</p>
           </div>
         </div>
       </div>
@@ -357,19 +335,45 @@
         <span class="section__index">07</span>
         <h2 class="section__title reveal">Testimonials</h2>
       </div>
-      <div class="testimonials__grid">
-        <blockquote class="quote glass reveal">
-          <p>"Placeholder testimonial — a few words from a happy client about the editing, turnaround, and creative direction."</p>
-          <footer><span class="quote__name">Client Name</span><span class="quote__role">Brand / Creator</span></footer>
-        </blockquote>
-        <blockquote class="quote glass reveal">
-          <p>"Placeholder testimonial — highlight the motion graphics quality and how the final edit elevated the project."</p>
-          <footer><span class="quote__name">Client Name</span><span class="quote__role">Event Organizer</span></footer>
-        </blockquote>
-        <blockquote class="quote glass reveal">
-          <p>"Placeholder testimonial — note the color grading, storytelling, and the cinematic feel of the final delivery."</p>
-          <footer><span class="quote__name">Client Name</span><span class="quote__role">YouTuber</span></footer>
-        </blockquote>
+      <div class="testimonials__marquee">
+        <div class="testimonials__track">
+          <blockquote class="quote glass">
+            <p>"Placeholder testimonial — a few words from a happy client about the editing, turnaround, and creative direction."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">Brand / Creator</span></footer>
+          </blockquote>
+          <blockquote class="quote glass">
+            <p>"Placeholder testimonial — highlight the motion graphics quality and how the final edit elevated the project."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">Event Organizer</span></footer>
+          </blockquote>
+          <blockquote class="quote glass">
+            <p>"Placeholder testimonial — note the color grading, storytelling, and the cinematic feel of the final delivery."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">YouTuber</span></footer>
+          </blockquote>
+          <blockquote class="quote glass" aria-hidden="true">
+            <p>"Placeholder testimonial — a few words from a happy client about the editing, turnaround, and creative direction."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">Brand / Creator</span></footer>
+          </blockquote>
+          <blockquote class="quote glass" aria-hidden="true">
+            <p>"Placeholder testimonial — highlight the motion graphics quality and how the final edit elevated the project."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">Event Organizer</span></footer>
+          </blockquote>
+          <blockquote class="quote glass" aria-hidden="true">
+            <p>"Placeholder testimonial — note the color grading, storytelling, and the cinematic feel of the final delivery."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">YouTuber</span></footer>
+          </blockquote>
+          <blockquote class="quote glass" aria-hidden="true">
+            <p>"Placeholder testimonial — a few words from a happy client about the editing, turnaround, and creative direction."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">Brand / Creator</span></footer>
+          </blockquote>
+          <blockquote class="quote glass" aria-hidden="true">
+            <p>"Placeholder testimonial — highlight the motion graphics quality and how the final edit elevated the project."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">Event Organizer</span></footer>
+          </blockquote>
+          <blockquote class="quote glass" aria-hidden="true">
+            <p>"Placeholder testimonial — note the color grading, storytelling, and the cinematic feel of the final delivery."</p>
+            <footer><span class="quote__name">Client Name</span><span class="quote__role">YouTuber</span></footer>
+          </blockquote>
+        </div>
       </div>
     </section>
 

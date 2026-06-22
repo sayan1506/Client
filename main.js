@@ -166,15 +166,6 @@ function initMotion() {
     });
   });
 
-  // Skill bars
-  gsap.utils.toArray(".bar").forEach((bar) => {
-    const fill = bar.querySelector(".bar__fill");
-    ScrollTrigger.create({
-      trigger: bar, start: "top 88%", once: true,
-      onEnter: () => { fill.style.width = bar.dataset.level + "%"; },
-    });
-  });
-
   // Section title subtle parallax index numbers
   gsap.utils.toArray(".section__index").forEach((el) => {
     gsap.fromTo(el, { y: 20 }, {
